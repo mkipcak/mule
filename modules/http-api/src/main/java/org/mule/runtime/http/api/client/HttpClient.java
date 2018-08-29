@@ -7,8 +7,10 @@
 package org.mule.runtime.http.api.client;
 
 import org.mule.runtime.http.api.client.auth.HttpAuthentication;
+import org.mule.runtime.http.api.client.ws.WebSocketCallback;
 import org.mule.runtime.http.api.domain.message.request.HttpRequest;
 import org.mule.runtime.http.api.domain.message.response.HttpResponse;
+import org.mule.runtime.http.api.ws.WebSocket;
 
 import java.io.IOException;
 import java.util.concurrent.CompletableFuture;
@@ -66,4 +68,8 @@ public interface HttpClient {
   CompletableFuture<HttpResponse> sendAsync(HttpRequest request, int responseTimeout, boolean followRedirects,
                                             HttpAuthentication authentication);
 
+  CompletableFuture<WebSocket> openWebSocket(HttpRequest request,
+                                             HttpRequestOptions options,
+                                             String connectionId,
+                                             WebSocketCallback callback);
 }

@@ -7,6 +7,8 @@
 package org.mule.runtime.http.api.server;
 
 import org.mule.runtime.http.api.HttpConstants.Protocol;
+import org.mule.runtime.http.api.server.ws.WebSocketResource;
+import org.mule.runtime.http.api.server.ws.WebSocketResourceHandler;
 
 import java.io.IOException;
 import java.util.Collection;
@@ -82,4 +84,6 @@ public interface HttpServer {
    * @return a {@link RequestHandlerManager} for the handler
    */
   RequestHandlerManager addRequestHandler(final String path, final RequestHandler requestHandler);
+
+  WebSocketResourceHandler addWebSocketHandler(WebSocketResource resource);
 }

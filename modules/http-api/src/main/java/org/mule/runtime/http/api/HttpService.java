@@ -6,11 +6,13 @@
  */
 package org.mule.runtime.http.api;
 
+import org.mule.api.annotation.Beta;
 import org.mule.runtime.api.service.Service;
 import org.mule.runtime.http.api.client.HttpClient;
 import org.mule.runtime.http.api.client.HttpClientFactory;
 import org.mule.runtime.http.api.server.HttpServer;
 import org.mule.runtime.http.api.server.HttpServerFactory;
+import org.mule.runtime.http.api.ws.WebSocketManager;
 
 /**
  * Provides HTTP server and client factories.
@@ -28,5 +30,8 @@ public interface HttpService extends Service {
    * @return an {@link HttpClientFactory} capable of creating {@link HttpClient}s.
    */
   HttpClientFactory getClientFactory();
+
+  @Beta
+  WebSocketManager getWebSocketManager();
 
 }
