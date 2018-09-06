@@ -1,4 +1,174 @@
 {
+  "4.1.4": {
+    "revapi": {
+      "ignore": [
+        {
+          "code": "java.method.addedToInterface",
+          "new": "method org.mule.runtime.http.api.ws.WebSocketManager org.mule.runtime.http.api.HttpService::getWebSocketManager()",
+          "package": "org.mule.runtime.http.api",
+          "classSimpleName": "HttpService",
+          "methodName": "getWebSocketManager",
+          "elementKind": "method",
+          "justification": "@Beta feature. Feature flagged by default"
+        },
+        {
+          "code": "java.annotation.added",
+          "old": "interface org.mule.runtime.http.api.client.HttpClient",
+          "new": "interface org.mule.runtime.http.api.client.HttpClient",
+          "annotationType": "org.mule.api.annotation.NoImplement",
+          "annotation": "@org.mule.api.annotation.NoImplement",
+          "package": "org.mule.runtime.http.api.client",
+          "classSimpleName": "HttpClient",
+          "elementKind": "interface",
+          "justification": "This was actually missing"
+        },
+        {
+          "code": "java.class.added",
+          "new": "interface org.mule.runtime.http.api.client.ws.WebSocketCallback",
+          "package": "org.mule.runtime.http.api.client.ws",
+          "classSimpleName": "WebSocketCallback",
+          "elementKind": "interface",
+          "justification": "@Beta feature. Feature flagged by default"
+        },
+        {
+          "code": "java.class.nonFinalClassInheritsFromNewClass",
+          "old": "class org.mule.runtime.http.api.domain.message.BaseHttpMessage",
+          "new": "class org.mule.runtime.http.api.domain.message.BaseHttpMessage",
+          "superClass": "org.mule.runtime.http.api.domain.message.BaseMessageWithHeaders",
+          "package": "org.mule.runtime.http.api.domain.message",
+          "classSimpleName": "BaseHttpMessage",
+          "elementKind": "class",
+          "justification": "RevApi over reacting to progress"
+        },
+        {
+          "code": "java.method.added",
+          "new": "method void org.mule.runtime.http.api.domain.message.BaseHttpMessage::<init>(org.mule.runtime.api.util.MultiMap<java.lang.String, java.lang.String>)",
+          "package": "org.mule.runtime.http.api.domain.message",
+          "classSimpleName": "BaseHttpMessage",
+          "methodName": "<init>",
+          "elementKind": "constructor",
+          "justification": "RevApi over reacting to progress"
+        },
+        {
+          "code": "java.class.added",
+          "new": "class org.mule.runtime.http.api.domain.message.BaseMessageWithHeaders",
+          "package": "org.mule.runtime.http.api.domain.message",
+          "classSimpleName": "BaseMessageWithHeaders",
+          "elementKind": "class",
+          "justification": "RevApi over reacting to progress"
+        },
+        {
+          "code": "java.class.nowImplementsInterface",
+          "old": "interface org.mule.runtime.http.api.domain.message.HttpMessage",
+          "new": "interface org.mule.runtime.http.api.domain.message.HttpMessage",
+          "interface": "org.mule.runtime.http.api.domain.message.MessageWithHeaders",
+          "package": "org.mule.runtime.http.api.domain.message",
+          "classSimpleName": "HttpMessage",
+          "elementKind": "interface",
+          "justification": "RevApi over reacting to progress"
+        },
+        {
+          "code": "java.class.added",
+          "new": "interface org.mule.runtime.http.api.domain.message.MessageWithHeaders",
+          "package": "org.mule.runtime.http.api.domain.message",
+          "classSimpleName": "MessageWithHeaders",
+          "elementKind": "interface",
+          "justification": "RevApi over reacting to progress"
+        },
+        {
+          "code": "java.annotation.added",
+          "old": "interface org.mule.runtime.http.api.server.HttpServer",
+          "new": "interface org.mule.runtime.http.api.server.HttpServer",
+          "annotationType": "org.mule.api.annotation.NoImplement",
+          "annotation": "@org.mule.api.annotation.NoImplement",
+          "package": "org.mule.runtime.http.api.server",
+          "classSimpleName": "HttpServer",
+          "elementKind": "interface",
+          "justification": "This was actually missing"
+        },
+        {
+          "code": "java.class.added",
+          "new": "interface org.mule.runtime.http.api.server.ws.WebSocketConnectionHandler",
+          "package": "org.mule.runtime.http.api.server.ws",
+          "classSimpleName": "WebSocketConnectionHandler",
+          "elementKind": "interface",
+          "justification": "@Beta feature. Feature flagged by default"
+        },
+        {
+          "code": "java.class.added",
+          "new": "class org.mule.runtime.http.api.server.ws.WebSocketConnectionRejectedException",
+          "package": "org.mule.runtime.http.api.server.ws",
+          "classSimpleName": "WebSocketConnectionRejectedException",
+          "elementKind": "class",
+          "justification": "@Beta feature. Feature flagged by default"
+        },
+        {
+          "code": "java.class.added",
+          "new": "interface org.mule.runtime.http.api.server.ws.WebSocketMessageHandler",
+          "package": "org.mule.runtime.http.api.server.ws",
+          "classSimpleName": "WebSocketMessageHandler",
+          "elementKind": "interface",
+          "justification": "@Beta feature. Feature flagged by default"
+        },
+        {
+          "code": "java.class.added",
+          "new": "interface org.mule.runtime.http.api.server.ws.WebSocketRequest",
+          "package": "org.mule.runtime.http.api.server.ws",
+          "classSimpleName": "WebSocketRequest",
+          "elementKind": "interface",
+          "justification": "@Beta feature. Feature flagged by default"
+        },
+        {
+          "code": "java.class.added",
+          "new": "class org.mule.runtime.http.api.server.ws.WebSocketResource",
+          "package": "org.mule.runtime.http.api.server.ws",
+          "classSimpleName": "WebSocketResource",
+          "elementKind": "class",
+          "justification": "@Beta feature. Feature flagged by default"
+        },
+        {
+          "code": "java.class.added",
+          "new": "interface org.mule.runtime.http.api.server.ws.WebSocketResourceHandler",
+          "package": "org.mule.runtime.http.api.server.ws",
+          "classSimpleName": "WebSocketResourceHandler",
+          "elementKind": "interface",
+          "justification": "@Beta feature. Feature flagged by default"
+        },
+        {
+          "code": "java.class.added",
+          "new": "interface org.mule.runtime.http.api.ws.WebSocket",
+          "package": "org.mule.runtime.http.api.ws",
+          "classSimpleName": "WebSocket",
+          "elementKind": "interface",
+          "justification": "@Beta feature. Feature flagged by default"
+        },
+        {
+          "code": "java.class.added",
+          "new": "class org.mule.runtime.http.api.ws.WebSocketAlreadyExistsException",
+          "package": "org.mule.runtime.http.api.ws",
+          "classSimpleName": "WebSocketAlreadyExistsException",
+          "elementKind": "class",
+          "justification": "@Beta feature. Feature flagged by default"
+        },
+        {
+          "code": "java.class.added",
+          "new": "interface org.mule.runtime.http.api.ws.WebSocketManager",
+          "package": "org.mule.runtime.http.api.ws",
+          "classSimpleName": "WebSocketManager",
+          "elementKind": "interface",
+          "justification": "@Beta feature. Feature flagged by default"
+        },
+        {
+          "code": "java.class.added",
+          "new": "interface org.mule.runtime.http.api.ws.WebSocketMessage",
+          "package": "org.mule.runtime.http.api.ws",
+          "classSimpleName": "WebSocketMessage",
+          "elementKind": "interface",
+          "justification": "@Beta feature. Feature flagged by default"
+        }
+      ]
+    }
+  },
   "4.1.1": {
     "revapi": {
       "ignore": [

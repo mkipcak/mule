@@ -16,7 +16,7 @@ public class WebSocketAlreadyExistsException extends MuleException {
 
   public WebSocketAlreadyExistsException(String id, WebSocket previous) {
     super(createStaticMessage(format(
-        "A WebSocket connection for id '%s' already exists. Previous connection info:\n%s",
-        id, previous.toString())));
+                                     "A WebSocket connection for id '%s' already exists. Previous connection info:\n%s",
+                                     id, previous.toString())));
   }
 }

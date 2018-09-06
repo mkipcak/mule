@@ -17,8 +17,7 @@ public interface WebSocket {
 
   enum WebSocketType {
 
-    INBOUND,
-    OUTBOUND
+    INBOUND, OUTBOUND
   }
 
   String getId();

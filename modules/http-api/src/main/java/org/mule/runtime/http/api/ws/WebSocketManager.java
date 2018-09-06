@@ -15,5 +15,5 @@ public interface WebSocketManager {
 
   Optional<WebSocket> getWebSocket(String id);
 
-  
+
 }

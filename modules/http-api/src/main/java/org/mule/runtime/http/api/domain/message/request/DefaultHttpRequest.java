@@ -50,7 +50,7 @@ class DefaultHttpRequest extends BaseHttpMessage implements HttpRequest {
   public String getMethod() {
     return method;
   }
-  
+
   @Override
   public HttpEntity getEntity() {
     return entity;
