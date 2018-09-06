@@ -6,6 +6,9 @@
  */
 package org.mule.runtime.http.api.server.ws;
 
+import com.google.common.annotations.Beta;
+
+@Beta
 public final class WebSocketResource {
 
   private final String path;

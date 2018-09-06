@@ -8,6 +8,9 @@ package org.mule.runtime.http.api.client.ws;
 
 import org.mule.runtime.http.api.ws.WebSocketMessage;
 
+import com.google.common.annotations.Beta;
+
+@Beta
 public interface WebSocketCallback {
 
   void onConnect();

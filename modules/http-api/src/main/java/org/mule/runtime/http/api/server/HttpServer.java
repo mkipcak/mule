@@ -6,9 +6,12 @@
  */
 package org.mule.runtime.http.api.server;
 
+import org.mule.api.annotation.NoImplement;
 import org.mule.runtime.http.api.HttpConstants.Protocol;
 import org.mule.runtime.http.api.server.ws.WebSocketResource;
 import org.mule.runtime.http.api.server.ws.WebSocketResourceHandler;
+
+import com.google.common.annotations.Beta;
 
 import java.io.IOException;
 import java.util.Collection;
@@ -18,6 +21,7 @@ import java.util.Collection;
  *
  * @since 4.0
  */
+@NoImplement
 public interface HttpServer {
 
   /**
@@ -85,5 +89,6 @@ public interface HttpServer {
    */
   RequestHandlerManager addRequestHandler(final String path, final RequestHandler requestHandler);
 
+  @Beta
   WebSocketResourceHandler addWebSocketHandler(WebSocketResource resource);
 }

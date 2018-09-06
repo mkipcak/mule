@@ -8,8 +8,10 @@ package org.mule.runtime.http.api.ws;
 
 import static java.lang.String.format;
 import static org.mule.runtime.api.i18n.I18nMessageFactory.createStaticMessage;
+import org.mule.api.annotation.Beta;
 import org.mule.runtime.api.exception.MuleException;
 
+@Beta
 public class WebSocketAlreadyExistsException extends MuleException {
 
   public WebSocketAlreadyExistsException(String id, WebSocket previous) {

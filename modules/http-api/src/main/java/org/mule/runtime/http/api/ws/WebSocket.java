@@ -6,11 +6,13 @@
  */
 package org.mule.runtime.http.api.ws;
 
+import org.mule.api.annotation.Beta;
 import org.mule.runtime.api.metadata.MediaType;
 
 import java.io.IOException;
 import java.io.InputStream;
 
+@Beta
 public interface WebSocket {
 
   enum WebSocketType {

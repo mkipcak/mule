@@ -8,6 +8,9 @@ package org.mule.runtime.http.api.server.ws;
 
 import org.mule.runtime.api.exception.MuleException;
 
+import com.google.common.annotations.Beta;
+
+@Beta
 public class WebSocketConnectionRejectedException extends MuleException {
 
 

@@ -1,10 +1,15 @@
 package org.mule.runtime.http.api.server.ws;
 
+import org.mule.api.annotation.NoImplement;
 import org.mule.runtime.api.util.MultiMap;
 import org.mule.runtime.http.api.domain.message.MessageWithHeaders;
 import org.mule.runtime.http.api.domain.request.ClientConnection;
 import org.mule.runtime.http.api.domain.request.ServerConnection;
 
+import com.google.common.annotations.Beta;
+
+@Beta
+@NoImplement
 public interface WebSocketRequest extends MessageWithHeaders {
 
   String getPath();

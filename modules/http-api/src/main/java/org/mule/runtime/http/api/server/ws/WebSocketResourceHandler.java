@@ -8,7 +8,10 @@ package org.mule.runtime.http.api.server.ws;
 
 import org.mule.api.annotation.NoImplement;
 
+import com.google.common.annotations.Beta;
+
 @NoImplement
+@Beta
 public interface WebSocketResourceHandler {
 
 }
