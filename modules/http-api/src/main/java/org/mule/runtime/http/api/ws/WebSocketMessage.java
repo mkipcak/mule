@@ -6,8 +6,6 @@
  */
 package org.mule.runtime.http.api.ws;
 
-import org.mule.runtime.http.api.server.ws.WebSocketRequest;
-
 import java.io.InputStream;
 
 public interface WebSocketMessage {

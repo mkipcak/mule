@@ -7,15 +7,18 @@
 package org.mule.runtime.http.api.client.ws;
 
 import org.mule.api.annotation.Experimental;
-import org.mule.runtime.http.api.ws.WebSocketMessage;
+import org.mule.runtime.api.metadata.TypedValue;
+import org.mule.runtime.http.api.ws.WebSocket;
+
+import java.io.InputStream;
 
 @Experimental
 public interface WebSocketCallback {
 
-  void onConnect();
+  void onConnect(WebSocket webSocket);
 
-  void onClose();
+  void onClose(WebSocket webSocket);
 
-  void onMessage(WebSocketMessage message);
+  void onMessage(WebSocket webSocket, TypedValue<InputStream> content);
 
 }
