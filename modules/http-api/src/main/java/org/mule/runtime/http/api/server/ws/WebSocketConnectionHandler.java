@@ -6,12 +6,15 @@
  */
 package org.mule.runtime.http.api.server.ws;
 
-import com.google.common.annotations.Beta;
+import org.mule.api.annotation.Experimental;
+import org.mule.runtime.http.api.ws.WebSocket;
 
-import java.util.Optional;
-
-@Beta
+@Experimental
 public interface WebSocketConnectionHandler {
 
-  Optional<String> onConnect(WebSocketRequest request) throws WebSocketConnectionRejectedException;
+  String getSocketId(WebSocketRequest request);
+
+  void onConnect(WebSocket socket, WebSocketRequest request) throws WebSocketConnectionRejectedException;
+
+  void onClose(WebSocket socket, WebSocketRequest request);
 }

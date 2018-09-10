@@ -6,25 +6,33 @@
  */
 package org.mule.runtime.http.api.server.ws;
 
+import org.mule.api.annotation.Experimental;
 import org.mule.api.annotation.NoImplement;
+import org.mule.runtime.api.metadata.MediaType;
 import org.mule.runtime.api.util.MultiMap;
 import org.mule.runtime.http.api.domain.message.MessageWithHeaders;
 import org.mule.runtime.http.api.domain.request.ClientConnection;
 import org.mule.runtime.http.api.domain.request.ServerConnection;
 
-import com.google.common.annotations.Beta;
+import java.net.URI;
 
-@Beta
+@Experimental
 @NoImplement
 public interface WebSocketRequest extends MessageWithHeaders {
 
   String getPath();
 
-  String getContentType();
+  MediaType getContentType();
 
   MultiMap<String, String> getQueryParams();
 
   String getScheme();
+
+  String getHttpVersion();
+
+  String getMethod();
+
+  URI getRequestUri();
 
   /**
    * @return the server connection descriptor

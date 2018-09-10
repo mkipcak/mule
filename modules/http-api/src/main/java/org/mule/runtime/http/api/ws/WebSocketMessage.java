@@ -6,15 +6,15 @@
  */
 package org.mule.runtime.http.api.ws;
 
-import org.mule.runtime.api.metadata.MediaType;
+import org.mule.runtime.http.api.server.ws.WebSocketRequest;
 
 import java.io.InputStream;
 
 public interface WebSocketMessage {
 
-  String getConnectionId();
+  WebSocket getSocket();
+
+  WebSocketRequest getRequest();
 
   InputStream getContent();
-
-  MediaType getMediaType();
 }

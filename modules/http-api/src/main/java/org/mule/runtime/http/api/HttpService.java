@@ -6,7 +6,7 @@
  */
 package org.mule.runtime.http.api;
 
-import org.mule.api.annotation.Beta;
+import org.mule.api.annotation.Experimental;
 import org.mule.runtime.api.service.Service;
 import org.mule.runtime.http.api.client.HttpClient;
 import org.mule.runtime.http.api.client.HttpClientFactory;
@@ -31,7 +31,7 @@ public interface HttpService extends Service {
    */
   HttpClientFactory getClientFactory();
 
-  @Beta
+  @Experimental
   WebSocketManager getWebSocketManager();
 
 }

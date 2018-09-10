@@ -6,13 +6,14 @@
  */
 package org.mule.runtime.http.api.ws;
 
-import org.mule.api.annotation.Beta;
+import org.mule.api.annotation.Experimental;
 import org.mule.runtime.api.metadata.MediaType;
 
-import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
-@Beta
+@Experimental
 public interface WebSocket {
 
   enum WebSocketType {
@@ -26,7 +27,13 @@ public interface WebSocket {
 
   String getPath();
 
-  void send(InputStream content, MediaType mediaType) throws IOException;
+  List<String> getGroups();
+
+  void addGroup(String group);
+
+  void removeGroup(String group);
+
+  CompletableFuture<Void> send(InputStream content, MediaType mediaType);
 
   void close();
 }

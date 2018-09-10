@@ -6,11 +6,11 @@
  */
 package org.mule.runtime.http.api.ws;
 
-import org.mule.api.annotation.Beta;
+import org.mule.api.annotation.Experimental;
 
 import java.util.Optional;
 
-@Beta
+@Experimental
 public interface WebSocketManager {
 
   Optional<WebSocket> getWebSocket(String id);

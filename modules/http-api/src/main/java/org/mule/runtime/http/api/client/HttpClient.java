@@ -6,14 +6,13 @@
  */
 package org.mule.runtime.http.api.client;
 
+import org.mule.api.annotation.Experimental;
 import org.mule.api.annotation.NoImplement;
 import org.mule.runtime.http.api.client.auth.HttpAuthentication;
 import org.mule.runtime.http.api.client.ws.WebSocketCallback;
 import org.mule.runtime.http.api.domain.message.request.HttpRequest;
 import org.mule.runtime.http.api.domain.message.response.HttpResponse;
 import org.mule.runtime.http.api.ws.WebSocket;
-
-import com.google.common.annotations.Beta;
 
 import java.io.IOException;
 import java.util.concurrent.CompletableFuture;
@@ -72,7 +71,7 @@ public interface HttpClient {
   CompletableFuture<HttpResponse> sendAsync(HttpRequest request, int responseTimeout, boolean followRedirects,
                                             HttpAuthentication authentication);
 
-  @Beta
+  @Experimental
   CompletableFuture<WebSocket> openWebSocket(HttpRequest request,
                                              int responseTimeout, boolean followRedirects,
                                              HttpAuthentication authentication,
