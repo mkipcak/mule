@@ -8,6 +8,7 @@ package org.mule.runtime.http.api.client;
 
 import org.mule.api.annotation.Experimental;
 import org.mule.api.annotation.NoImplement;
+import org.mule.runtime.http.api.HttpConstants.Protocol;
 import org.mule.runtime.http.api.client.auth.HttpAuthentication;
 import org.mule.runtime.http.api.client.ws.WebSocketCallback;
 import org.mule.runtime.http.api.domain.message.request.HttpRequest;
@@ -75,6 +76,9 @@ public interface HttpClient {
   CompletableFuture<WebSocket> openWebSocket(HttpRequest request,
                                              int responseTimeout, boolean followRedirects,
                                              HttpAuthentication authentication,
-                                             String connectionId,
+                                             String socketId,
                                              WebSocketCallback callback);
+
+  @Experimental
+  Protocol getScheme();
 }
