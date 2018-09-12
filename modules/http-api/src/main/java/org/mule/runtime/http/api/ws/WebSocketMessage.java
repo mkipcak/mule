@@ -6,6 +6,8 @@
  */
 package org.mule.runtime.http.api.ws;
 
+import org.mule.runtime.api.metadata.TypedValue;
+
 import java.io.InputStream;
 
 public interface WebSocketMessage {
@@ -14,5 +16,5 @@ public interface WebSocketMessage {
 
   WebSocketRequest getRequest();
 
-  InputStream getContent();
+  TypedValue<InputStream> getContent();
 }
