@@ -26,7 +26,7 @@ public interface WebSocketRequest extends MessageWithHeaders {
 
   MultiMap<String, String> getQueryParams();
 
-  String getScheme();
+  WebSocketProtocol getScheme();
 
   String getHttpVersion();
 

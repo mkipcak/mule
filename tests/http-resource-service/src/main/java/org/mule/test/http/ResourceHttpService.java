@@ -6,9 +6,7 @@
  */
 package org.mule.test.http;
 
-import static org.mule.runtime.http.api.HttpConstants.Protocol.HTTP;
 import org.mule.runtime.api.exception.MuleRuntimeException;
-import org.mule.runtime.http.api.HttpConstants.Protocol;
 import org.mule.runtime.http.api.HttpService;
 import org.mule.runtime.http.api.client.ClientNotFoundException;
 import org.mule.runtime.http.api.client.HttpClient;
@@ -94,11 +92,6 @@ public class ResourceHttpService implements HttpService {
           @Override
           public void stop() {
 
-          }
-
-          @Override
-          public Protocol getScheme() {
-            return HTTP;
           }
         };
       }

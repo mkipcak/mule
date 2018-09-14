@@ -25,6 +25,8 @@ public interface WebSocket {
 
   WebSocketType getType();
 
+  WebSocketProtocol getProtocol();
+
   String getPath();
 
   List<String> getGroups();

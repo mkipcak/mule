@@ -8,7 +8,6 @@ package org.mule.runtime.http.api.client;
 
 import org.mule.api.annotation.Experimental;
 import org.mule.api.annotation.NoImplement;
-import org.mule.runtime.http.api.HttpConstants.Protocol;
 import org.mule.runtime.http.api.client.auth.HttpAuthentication;
 import org.mule.runtime.http.api.client.ws.WebSocketCallback;
 import org.mule.runtime.http.api.domain.message.request.HttpRequest;
@@ -79,7 +78,4 @@ public interface HttpClient {
                                                      WebSocketCallback callback) {
     throw new UnsupportedOperationException("WebSockets are only supported in Enterprise Edition");
   }
-
-  @Experimental
-  Protocol getScheme();
 }
