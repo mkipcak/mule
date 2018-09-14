@@ -73,11 +73,12 @@ public interface HttpClient {
                                             HttpAuthentication authentication);
 
   @Experimental
-  CompletableFuture<WebSocket> openWebSocket(HttpRequest request,
-                                             int responseTimeout, boolean followRedirects,
-                                             HttpAuthentication authentication,
-                                             String socketId,
-                                             WebSocketCallback callback);
+  default CompletableFuture<WebSocket> openWebSocket(HttpRequest request,
+                                                     HttpRequestOptions requestOptions,
+                                                     String socketId,
+                                                     WebSocketCallback callback) {
+    throw new UnsupportedOperationException("WebSockets are only supported in Enterprise Edition");
+  }
 
   @Experimental
   Protocol getScheme();

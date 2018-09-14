@@ -173,6 +173,50 @@
           "classSimpleName": "WebSocketRequest",
           "elementKind": "interface",
           "justification": "@Experimental feature. Feature flagged by default"
+        },
+        {
+          "code": "java.class.added",
+          "new": "class org.mule.runtime.http.api.client.ClientNotFoundException",
+          "package": "org.mule.runtime.http.api.client",
+          "classSimpleName": "ClientNotFoundException",
+          "elementKind": "class",
+          "justification": "@Experimental feature. Feature flagged by default"
+        },
+        {
+          "code": "java.annotation.added",
+          "old": "interface org.mule.runtime.http.api.client.HttpClientFactory",
+          "new": "interface org.mule.runtime.http.api.client.HttpClientFactory",
+          "annotationType": "org.mule.api.annotation.NoImplement",
+          "annotation": "@org.mule.api.annotation.NoImplement",
+          "package": "org.mule.runtime.http.api.client",
+          "classSimpleName": "HttpClientFactory",
+          "elementKind": "interface",
+          "justification": "This was actually missing"
+        },
+        {
+          "code": "java.class.added",
+          "new": "interface org.mule.runtime.http.api.client.HttpRequestOptions",
+          "package": "org.mule.runtime.http.api.client",
+          "classSimpleName": "HttpRequestOptions",
+          "elementKind": "interface",
+          "justification": "@Experimental feature. Feature flagged by default"
+        },
+        {
+          "code": "java.class.added",
+          "new": "class org.mule.runtime.http.api.client.HttpRequestOptionsBuilder",
+          "package": "org.mule.runtime.http.api.client",
+          "classSimpleName": "HttpRequestOptionsBuilder",
+          "elementKind": "class",
+          "justification": "@Experimental feature. Feature flagged by default"
+        },
+        {
+          "code": "java.method.defaultMethodAddedToInterface",
+          "new": "method java.util.concurrent.CompletableFuture<org.mule.runtime.http.api.ws.WebSocket> org.mule.runtime.http.api.client.HttpClient::openWebSocket(org.mule.runtime.http.api.domain.message.request.HttpRequest, org.mule.runtime.http.api.client.HttpRequestOptions, java.lang.String, org.mule.runtime.http.api.client.ws.WebSocketCallback)",
+          "package": "org.mule.runtime.http.api.client",
+          "classSimpleName": "HttpClient",
+          "methodName": "openWebSocket",
+          "elementKind": "method",
+          "justification": "@Experimental feature. Feature flagged by default"
         }
       ]
     }
