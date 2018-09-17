@@ -11,8 +11,7 @@ import org.mule.api.annotation.Experimental;
 @Experimental
 public enum WebSocketProtocol {
 
-  WS("ws"),
-  WSS("wss");
+  WS("ws"), WSS("wss");
 
   private final String scheme;
 

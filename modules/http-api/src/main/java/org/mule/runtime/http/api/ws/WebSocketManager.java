@@ -9,11 +9,12 @@ package org.mule.runtime.http.api.ws;
 import org.mule.api.annotation.Experimental;
 
 import java.util.Optional;
+import java.util.function.Consumer;
 
 @Experimental
 public interface WebSocketManager {
 
-  Optional<WebSocket> getWebSocket(String id);
+  Optional<WebSocket> getWebSocket(String socketId);
 
-
+  FragmentHandler getFragmentHandler(String socketId, Consumer<FragmentHandler> newHandlerConsumer);
 }

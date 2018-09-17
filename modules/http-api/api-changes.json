@@ -217,6 +217,14 @@
           "methodName": "openWebSocket",
           "elementKind": "method",
           "justification": "@Experimental feature. Feature flagged by default"
+        },
+        {
+          "code": "java.class.added",
+          "new": "enum org.mule.runtime.http.api.ws.WebSocketProtocol",
+          "package": "org.mule.runtime.http.api.ws",
+          "classSimpleName": "WebSocketProtocol",
+          "elementKind": "enum",
+          "justification": "@Experimental feature. Feature flagged by default"
         }
       ]
     }

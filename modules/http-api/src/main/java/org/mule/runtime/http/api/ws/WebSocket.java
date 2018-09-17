@@ -10,6 +10,7 @@ import org.mule.api.annotation.Experimental;
 import org.mule.runtime.api.metadata.MediaType;
 
 import java.io.InputStream;
+import java.net.URI;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
@@ -27,7 +28,7 @@ public interface WebSocket {
 
   WebSocketProtocol getProtocol();
 
-  String getPath();
+  URI getUri();
 
   List<String> getGroups();
 
